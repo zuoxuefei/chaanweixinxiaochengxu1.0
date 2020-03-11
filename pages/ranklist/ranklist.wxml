@@ -1,0 +1,19 @@
+<!--pages/ranklist.wxml-->
+<view class="container">
+   <image src="../../resources/images/mainpage.png" class="mainpage_image"></image>
+   <view class="title">
+     <text>我的排名情况</text>
+   </view>
+   
+  <image class="userinfo-headimage" src="{{headimage}}"></image>
+  
+   <view class="myname_view">
+      <text>{{nickname}}</text>
+   </view>
+
+   <view class="detail">
+      登出时间:{{logoutdate}}
+      排名:{{myranking}}
+   </view>
+
+</view>

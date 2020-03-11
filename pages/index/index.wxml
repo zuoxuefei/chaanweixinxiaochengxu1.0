@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<import src="../../utils/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>
+<view class="container">
+  <view class = "title"></view>
+  <view class = "innerFrame">
+    <view class = "box">
+      <view class= "subbox">
+      <view class= "child">{{hours}}</view>
+      <view class = "label">时</view>
+      </view>
+      <view class = "subbox" >
+      <view class= "child">{{minute}}</view>
+      <view class = "label">分</view>
+      </view>
+      <view class = "subbox">
+      <view class= "child">{{second}}</view>
+      <view class = "label">秒</view>
+      </view>
+      <view class = "subbox">
+      <view class= "child">{{millsecond}}</view>
+      <view class = "label">毫秒</view>
+      </view>
+    </view>
+   
+  </view>
+
+  <view class="scancode">
+  <button class = "btn" bindtap="scanQrCode"  >{{buttonText}}</button>
+  </view>
+</view>
+
+<view class="modal-mask" wx:if="{{showModal}}">
+    <view class="model-container">
+    <view class="model-innerContainer">
+
+     <view class = "model-chanmping" style="background-image:url('https://www.chaan.fun/images/chananmping.png');background-size:100% 100%">
+      </view>
+      <view wx-if = "{{rank == 0}}"  style="margin-top:50px">您还没有排名</view>
+      <view wx:elif = "{{rank > 0}} " style="margin-top:50px">您的排名是: 第{{rank}}名</view>
+      <button bindtap="hideModel" style="margin-top:50px">我知道了</button>
+    </view>
+    </view>
+     
+</view>
+
